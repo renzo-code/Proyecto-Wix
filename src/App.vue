@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <div class="image-index">
+      <img src="https://static.wixstatic.com/media/84770f_573f9ee905a043e18a65f49e31c1c7e8.jpg/v1/fill/w_1903,h_754,al_t,q_85,usm_0.66_1.00_0.01/84770f_573f9ee905a043e18a65f49e31c1c7e8.webp">    
+    </div>
+    <Block :parrafo="parrafo" title="Servicio"/>
+    <Block :parrafo="parrafo" title="Proyectos"/>
+    <Block :parrafo="parrafo" title="Clientes"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './layout/Header'
+import Block from './components/primerComponente'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Block,
+  },
+  data() {
+    return {
+      parrafo: 'Este es un buen espacio para extenderte sobre tu compañía y servicios. Puedes usar este espacio para incorporar más detalles sobre tu empresa. Escribe sobre tu personal y los servicios que ofreces. Cuéntales a los visitantes la historia sobre cómo se te ocurrió la idea de tu negocio y diles qué te diferencia de tus competidores. ',
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+.image-index {
+  height: 685px;
+  width: 100%;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 </style>
