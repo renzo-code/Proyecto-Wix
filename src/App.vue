@@ -4,21 +4,26 @@
     <div class="image-index">
       <img src="https://static.wixstatic.com/media/84770f_573f9ee905a043e18a65f49e31c1c7e8.jpg/v1/fill/w_1903,h_754,al_t,q_85,usm_0.66_1.00_0.01/84770f_573f9ee905a043e18a65f49e31c1c7e8.webp">    
     </div>
-    <Block :parrafo="parrafo" title="Servicio"/>
-    <Block :parrafo="parrafo" title="Proyectos"/>
-    <Block :parrafo="parrafo" title="Clientes"/>
+    <div class="blocked">
+      <Block :parrafo="parrafo" title="Servicio"/>
+      <Block :parrafo="parrafo" title="Proyectos"/>
+      <Block :parrafo="parrafo" title="Clientes"/>
+    </div>
+    <TextPanel />
   </div>
 </template>
 
 <script>
 import Header from './layout/Header'
 import Block from './components/primerComponente'
+import TextPanel from './components/TextPanel'
 
 export default {
   name: 'App',
   components: {
     Header,
     Block,
+    TextPanel,
   },
   data() {
     return {
@@ -34,7 +39,6 @@ export default {
   padding: 0;
   margin: 0;
 }
-
 .image-index {
   height: 685px;
   width: 100%;
@@ -44,5 +48,9 @@ export default {
     object-fit: cover;
   }
 }
-
+.blocked{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 75px 420px 
+}
 </style>
