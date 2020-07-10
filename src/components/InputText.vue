@@ -20,7 +20,7 @@ export default {
   margin-bottom: 15px; 
 }
 .input-texto{
-  width: 350px;
+  width: 100%;
   height: 35px;
   padding-left: 20px;
   font-size: 15px;

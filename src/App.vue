@@ -5,9 +5,11 @@
       <img src="https://static.wixstatic.com/media/84770f_573f9ee905a043e18a65f49e31c1c7e8.jpg/v1/fill/w_1903,h_754,al_t,q_85,usm_0.66_1.00_0.01/84770f_573f9ee905a043e18a65f49e31c1c7e8.webp">    
     </div>
     <div class="blocked">
-      <Block :parrafo="parrafo" title="Servicio" />
-      <Block :parrafo="parrafo" title="Proyectos" />
-      <Block :parrafo="parrafo" title="Clientes" />
+      <div class="content">
+        <Block :parrafo="parrafo" title="Servicio" />
+        <Block :parrafo="parrafo" title="Proyectos" />
+        <Block :parrafo="parrafo" title="Clientes" />
+      </div>
     </div>
     <TextPanel />
     <Feed />
@@ -52,8 +54,23 @@ export default {
   }
 }
 .blocked{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 75px 420px;
+  padding-top: 100px;
+  width: 100%;
+  & > .content {
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .blocked {
+    background: red;
+    display: block;
+    padding: 0;
+    & > .content {
+      display: block;
+    }
+  }
 }
 </style>

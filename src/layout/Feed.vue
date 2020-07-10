@@ -2,20 +2,22 @@
   <div class="feed">
     <h1 class="feed-item-title">CONTÁCTANOS</h1>
     <div class="contac">
-      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6561.293037998583!2d-76.98111198308015!3d-12.086927870076341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c79f5dacafbf%3A0x2aecf92fd4325f0d!2sJockey%20Plaza!5e0!3m2!1ses-419!2spe!4v1594142495586!5m2!1ses-419!2spe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      <div class="form">
-        <h2 class="contac-item">
-          Av. Los Rosales 122
-          28021, Madrid
-          info@misitio.com
-          Tel: 914-123-456
-        </h2>
-        <div class="input-text">
-          <InputText placeholder="Nombre"/>
-          <InputText placeholder="Email"/>
-          <InputText placeholder="Telefono"/>
-          <AreaText />
-          <Button styles="btn-enviar" name="Enviar"/>
+      <div class="content">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6561.293037998583!2d-76.98111198308015!3d-12.086927870076341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c79f5dacafbf%3A0x2aecf92fd4325f0d!2sJockey%20Plaza!5e0!3m2!1ses-419!2spe!4v1594142495586!5m2!1ses-419!2spe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="form">
+          <h2 class="contac-item">
+            Av. Los Rosales 122
+            28021, Madrid
+            info@misitio.com
+            Tel: 914-123-456
+          </h2>
+          <div class="input-text">
+            <InputText placeholder="Nombre"/>
+            <InputText placeholder="Email"/>
+            <InputText placeholder="Telefono"/>
+            <AreaText />
+            <Button styles="btn-enviar" name="Enviar"/>
+          </div>
         </div>
       </div>
     </div>
@@ -44,10 +46,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .feed{
   background-color: #0C3C60;
-  height: 1050px;
+  min-height: 1050px;
   width: 100%;
 }
 .feed-item-title{
@@ -59,10 +61,14 @@ export default {
   font-size: 70px;
 }
 .contac{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0 600px 0 300px;
+  width: 100%;
+  & > .content {
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+  }
 }
+
 .contac-item{
   padding-left: 75px;
   padding-right: 95px;
@@ -94,5 +100,26 @@ export default {
   margin-right: 20px;
   cursor: pointer;
   height: 20px;
+}
+
+@media (max-width: 600px) {
+  .contac {
+    display: block;
+    padding: 0;
+    & > iframe {
+      width: 100%;
+    }
+    & > .form {
+      width: 100%;
+      margin: 0;
+      & > h2 {
+        padding: 0 50px;
+      }
+      & > .input-text {
+        width: 100%;
+        padding: 0 10px;
+      }
+    }
+  }
 }
 </style>

@@ -30,7 +30,7 @@ export default {
   flex-direction: column;
   background-color: #0C3C60;
   width: 300px;
-  height: 400px;
+  min-height: 400px;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -44,5 +44,11 @@ export default {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 25px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .block {
+    width: 100%;
+  }
 }
 </style>

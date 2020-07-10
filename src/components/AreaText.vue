@@ -6,14 +6,14 @@
 
 <script>
 export default {
-name: 'AreaText'
+  name: 'AreaText'
 }
 </script>
 
 <style lang="scss">
 .text-area-item{
   height: 118px;
-  width: 350px;
+  width: 100%;
   text-align: top;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 15px;
