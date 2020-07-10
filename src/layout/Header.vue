@@ -34,7 +34,7 @@ export default {
     color: #7BC7D8;
   }
 }
-.list:hover{
+.list-item:hover{
   opacity: 0.7;
   color: lightslategray;
 }

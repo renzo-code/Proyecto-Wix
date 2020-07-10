@@ -1,6 +1,9 @@
 <template>
   <div>
-    <button class="button">{{ name }}</button>
+    <button
+      :class="['button', styles,classe]">
+      {{ name }}
+    </button>
   </div>
 </template>
 
@@ -9,7 +12,9 @@ export default {
   name: 'Button',
   props: {
     name: String,
-  }
+    styles: String,
+    classe: String,
+  },
 }
 </script>
 
@@ -24,6 +29,19 @@ export default {
   &:hover{
     transition: 0.5s;
     color: #0C3C60;
+  }
+}
+.btn-enviar{
+margin-top: 20px;
+margin-left: 238px;
+}
+.btn-saber-mas{
+  background-color: #0C3C60;
+  
+  &:hover{
+    transition: 0.5s;
+    color: white;
+    background-color: #39729B;
   }
 }
 </style>

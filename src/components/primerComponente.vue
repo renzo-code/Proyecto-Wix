@@ -27,7 +27,6 @@ export default {
 <style lang="scss">
 .block{
   display: flex;
-  // align-items: center;
   flex-direction: column;
   background-color: #0C3C60;
   width: 300px;

@@ -5,11 +5,12 @@
       <img src="https://static.wixstatic.com/media/84770f_573f9ee905a043e18a65f49e31c1c7e8.jpg/v1/fill/w_1903,h_754,al_t,q_85,usm_0.66_1.00_0.01/84770f_573f9ee905a043e18a65f49e31c1c7e8.webp">    
     </div>
     <div class="blocked">
-      <Block :parrafo="parrafo" title="Servicio"/>
-      <Block :parrafo="parrafo" title="Proyectos"/>
-      <Block :parrafo="parrafo" title="Clientes"/>
+      <Block :parrafo="parrafo" title="Servicio" />
+      <Block :parrafo="parrafo" title="Proyectos" />
+      <Block :parrafo="parrafo" title="Clientes" />
     </div>
     <TextPanel />
+    <Feed />
   </div>
 </template>
 
@@ -17,6 +18,7 @@
 import Header from './layout/Header'
 import Block from './components/primerComponente'
 import TextPanel from './components/TextPanel'
+import Feed from './layout/Feed'
 
 export default {
   name: 'App',
@@ -24,6 +26,7 @@ export default {
     Header,
     Block,
     TextPanel,
+    Feed,
   },
   data() {
     return {
@@ -51,6 +54,6 @@ export default {
 .blocked{
   display: flex;
   justify-content: space-evenly;
-  margin: 75px 420px 
+  padding: 75px 420px;
 }
 </style>

@@ -12,7 +12,7 @@
       la historia sobre cómo se te ocurrió la idea de tu negocio y diles qué te diferencia de tus competidores. 
       Haz que tu empresa se destaque y muestra a tus visitantes quién eres.
     </p>
-    <Button class="boton" name="Saber más"/>
+    <Button classe="btn-saber-mas" name="Saber más"/>
   </div>
 </template>
 
@@ -20,10 +20,10 @@
 import Button from './Button'
 
 export default {
-name: 'TextPanel',
-components:{
-  Button,
-}
+  name: 'TextPanel',
+  components:{
+    Button,
+  } 
 }
 </script>
 
